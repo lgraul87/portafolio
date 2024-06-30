@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   template: '<router-outlet></router-outlet>'
 })
 export class AppComponent {
-  title = 'portafolio';
+  title = 'portfolio';
 }

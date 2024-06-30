@@ -1,4 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("./styles-desktop.css");
+@import url("./styles-tablet.css");
+@import url("./styles-mobile.css");
 
 html,
 body {
@@ -28,3 +30,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
