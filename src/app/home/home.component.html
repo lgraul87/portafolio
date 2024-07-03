@@ -1,9 +1,20 @@
 <div class="desktop-container">
-  <p>home desk works!</p>
+  <div class="grid-container">
+    <app-desktop-header></app-desktop-header>
+    <app-desktop-container [style]="desktopFirstContainer"></app-desktop-container>
+    <app-desktop-container
+    [color]="'red'"
+    [slideComponent]="slideComponent"
+    [style]="desktopFirstContainerLeftSide"></app-desktop-container>
+    <app-desktop-container [style]="desktopFirstTape"></app-desktop-container>
+    <app-desktop-container [style]="desktopSecondContainer"></app-desktop-container>
+    <app-desktop-container [style]="desktopThirdContainer"></app-desktop-container>
+    <app-desktop-container [style]="desktopFourthContainer"></app-desktop-container>
+    <app-desktop-container [style]="desktopFifthContainer"></app-desktop-container>
+    <app-desktop-container [style]="desktopSixthContainer"></app-desktop-container>
+    <app-desktop-container [style]="desktopAnimatedAd"></app-desktop-container>
+    <app-desktop-container [style]="desktopFaqs"></app-desktop-container>
+    <app-desktop-footer></app-desktop-footer>
+  </div>
 </div>
-<div class="tablet-container">
-  <p>home table works!</p>
-</div>
-<div class="mobile-container">
-  <p>home mobile works!</p>
-</div>
+

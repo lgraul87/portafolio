@@ -1,0 +1,14 @@
+@media screen and (width > 0px) and (width <= 768px) {
+
+  .desktop-container {
+    display: none;
+  }
+
+  .tablet-container {
+    display: none;
+  }
+
+  .mobile-container {
+    display: block;
+  }
+}
