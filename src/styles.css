@@ -2,17 +2,7 @@
 @import url("./styles-tablet.css");
 @import url("./styles-mobile.css");
 
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-:host {
+:root  {
   --bright-blue: oklch(51.01% 0.274 263.83);
   --electric-violet: oklch(53.18% 0.28 296.97);
   --french-violet: oklch(47.66% 0.246 305.88);
@@ -32,3 +22,12 @@ body {
 }
 
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

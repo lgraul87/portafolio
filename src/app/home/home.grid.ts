@@ -1,12 +1,17 @@
 export const desktopFirstContainer =
   `grid-area: 3/1/15/13;
-  background-color: green; margin: 20px;`
+  background-image: url('./../../assets/portfolio-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0px;`
 
 export const desktopFirstContainerLeftSide =
   `grid-area: 3/1/15/7;
-  background-color: yellow; margin: 20px;
-  display: grid;grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;`
+  margin: 20px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;`
 
 export const desktopFirstTape =
   `grid-area: 15/1/17/13;

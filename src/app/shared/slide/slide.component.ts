@@ -1,11 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-slide',
   standalone: true,
-  imports: [],
-  template: `<p>This is a dynamic!</p>`,
-  styleUrl: './slide.component.css'
+  imports: [
+    MatButtonModule,
+  ],
+  templateUrl: './slide.component.html',
+  styleUrl: './slide.component.css',
 })
 export class SlideComponent {
 
