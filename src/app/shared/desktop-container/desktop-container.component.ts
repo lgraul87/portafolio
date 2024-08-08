@@ -41,6 +41,10 @@ export class DesktopContainerComponent {
       const content = this.setCardComponentPropertiesByDesktopFourthContainer(this.id);
       this.buildCardComponent(content);
     }
+    if (this.id === 'desktop-fourth-container-right') {
+      const content = this.setCardComponentPropertiesByDesktopFourthContainerRight(this.id);
+      this.buildCardComponent(content);
+    }
   }
 
   // CUSTOMS METHODS
@@ -49,7 +53,11 @@ export class DesktopContainerComponent {
   }
 
   private setCardComponentPropertiesByDesktopFourthContainer(id: string) {
-    return this.desktopContainerService.setCardComponentPropertiesByDesktopFirstContainerLeftSide(id);
+    return this.desktopContainerService.setCardComponentPropertiesByDesktopFourthContainer(id);
+  }
+
+  private setCardComponentPropertiesByDesktopFourthContainerRight(id: string) {
+    return this.desktopContainerService.setCardComponentPropertiesByDesktopFourthContainerRight(id);
   }
 
   // GENERAL METHODS

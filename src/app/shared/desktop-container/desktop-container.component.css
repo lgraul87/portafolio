@@ -5,7 +5,21 @@
 }
 
 .desktop-fourth-container{
-  grid-area: 2/2/8/6;
+  grid-area: 1/1/9/7;
   padding: 20px;
   text-align: center;
+  background-image: url('./../../../assets/desktop-fourth-image-left-side.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.desktop-fourth-container-right{
+  grid-area: 1/7/9/13;
+  padding: 20px;
+  text-align: center;
+  background-image: url('./../../../assets/desktop-fourth-image-right-side.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

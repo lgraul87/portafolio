@@ -15,16 +15,27 @@ export class DesktopContainerService {
   setCardComponentPropertiesByDesktopFirstContainerLeftSide(id: string) {
     const firstTitle = { class: `${id}-title`, gridArea: "2/1/3/12", text: "Hello," };
     const secondTitle = { class: `${id}-title`, gridArea: "3/1/4/12", text: "everyone" };
-    const description = { class: `${id}-description`, gridArea: "5/1/9/12", text: `My name is Raúl Lora and I am a Front End Angular Developer. Visit my site and you can find examples of my work.` };
+    const description = { class: `${id}-description`, gridArea: "5/1/9/12", text: `My name is Raúl Lora and I am Angular Developer.
+
+    Visit my site and you can find examples of my work.` };
     const button = { class: `${id}-button`, gridArea: "11/1/12/12", text: "YOU CAN TAKE A LOOK NOW" };
     const content = { firstTitle, secondTitle, description, button };
     return content;
   }
 
   setCardComponentPropertiesByDesktopFourthContainer(id: string) {
-    const firstTitle = { class: `${id}-title`, gridArea: "2/1/3/12", text: "Hello," };
-    const secondTitle = { class: `${id}-title`, gridArea: "3/1/4/12", text: "everyone" };
-    const description = { class: `${id}-description`, gridArea: "5/1/9/12", text: `My name is Raúl Lora and I am a Front End Angular Developer. Visit my site and you can find examples of my work.` };
+    const firstTitle = { class: `${id}-title`, gridArea: "9/1/10/12", text: "Especialmente," };
+    const secondTitle = { class: `${id}-title`, gridArea: "", text: "" };
+    const description = { class: `${id}-description`, gridArea: "10/1/11/12", text: `Desarrolos desde 0` };
+    const button = { class: `${id}-button`, gridArea: "11/1/12/12", text: "YOU CAN TAKE A LOOK NOW" };
+    const content = { firstTitle, secondTitle, description, button };
+    return content;
+  }
+
+  setCardComponentPropertiesByDesktopFourthContainerRight(id: string) {
+    const firstTitle = { class: `${id}-title`, gridArea: "9/1/10/12", text: "Y con Gusto," };
+    const secondTitle = { class: `${id}-title`, gridArea: "", text: "" };
+    const description = { class: `${id}-description`, gridArea: "10/1/11/12", text: `Seo web Angular` };
     const button = { class: `${id}-button`, gridArea: "11/1/12/12", text: "YOU CAN TAKE A LOOK NOW" };
     const content = { firstTitle, secondTitle, description, button };
     return content;

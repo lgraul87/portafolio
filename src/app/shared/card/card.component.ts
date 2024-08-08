@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'app-slide',
+  selector: 'app-card',
   standalone: true,
   imports: [
     MatButtonModule,
