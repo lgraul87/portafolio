@@ -2,15 +2,25 @@
   <div class="grid-container">
     <app-desktop-header></app-desktop-header>
     <app-desktop-container [style]="desktopFirstContainer"></app-desktop-container>
+
     <app-desktop-container
-    [component]="'desktopFirstContainerLeftSide'"
+    [id]="'desktop-first-container-left-side'"
     [appDesktopContainerClass]="'desktop-first-container-left-side'"
-    [slideComponent]="slideComponent"
-    [style]="desktopFirstContainerLeftSide"></app-desktop-container>
+    [cardComponent]="cardComponent"
+    [style]="desktopFirstContainerLeftSide">
+    </app-desktop-container>
+
     <app-desktop-container [style]="desktopFirstTape"></app-desktop-container>
     <app-desktop-container [style]="desktopSecondContainer"></app-desktop-container>
     <app-desktop-container [style]="desktopThirdContainer"></app-desktop-container>
-    <app-desktop-container [style]="desktopFourthContainer"></app-desktop-container>
+
+    <app-desktop-container
+    [id]="'desktop-fourth-container'"
+    [appDesktopContainerClass]="'desktop-fourth-container'"
+    [cardComponent]="cardComponent"
+    [style]="desktopFourthContainer">
+    </app-desktop-container>
+
     <app-desktop-container [style]="desktopFifthContainer"></app-desktop-container>
     <app-desktop-container [style]="desktopSixthContainer"></app-desktop-container>
     <app-desktop-container [style]="desktopAnimatedAd"></app-desktop-container>
@@ -18,4 +28,3 @@
     <app-desktop-footer></app-desktop-footer>
   </div>
 </div>
-

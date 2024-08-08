@@ -1,4 +1,3 @@
-<p>desktop-container works!</p>
-<div class="{{appDesktopContainerClass}}" #myComponentRef>
-  <ng-template *ngComponentOutlet="slideComponent"></ng-template>
+<div class="{{appDesktopContainerClass}}">
+  <ng-container  *ngComponentOutlet="cardComponent; inputs: componentToSend"></ng-container>
 </div>

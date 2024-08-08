@@ -2,5 +2,10 @@
   grid-area: 2/2/7/6;
   padding: 20px;
   text-align: center;
+}
 
+.desktop-fourth-container{
+  grid-area: 2/2/8/6;
+  padding: 20px;
+  text-align: center;
 }

@@ -27,7 +27,10 @@ export const desktopThirdContainer =
 
 export const desktopFourthContainer =
   `grid-area: 38/1/47/13;
-  background-color: lightblue; margin: 20px;`
+  background-color: lightblue; margin: 20px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;`
 
 export const desktopFifthContainer =
   `grid-area: 47/1/56/13;

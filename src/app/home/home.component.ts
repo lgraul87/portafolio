@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 import { DesktopHeaderComponent } from '../shared/desktop-header/desktop-header.component';
 import { DesktopFooterComponent } from '../shared/desktop-footer/desktop-footer.component';
 import { DesktopContainerComponent } from '../shared/desktop-container/desktop-container.component';
@@ -7,12 +7,12 @@ import {
   desktopSecondContainer, desktopThirdContainer, desktopFourthContainer,
   desktopFifthContainer, desktopSixthContainer, desktopAnimatedAd, desktopFaqs
 } from './home.grid'
-import { SlideComponent } from '../shared/slide/slide.component';
+import { CardComponent } from '../shared/card/card.component';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, DesktopHeaderComponent, DesktopFooterComponent, DesktopContainerComponent, SlideComponent],
+  imports: [CommonModule, DesktopHeaderComponent, DesktopFooterComponent, DesktopContainerComponent, CardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -29,12 +29,6 @@ export class HomeComponent {
   desktopAnimatedAd = desktopAnimatedAd;
   desktopFaqs = desktopFaqs;
 
-  slideComponent: any = SlideComponent;
-
+  cardComponent: any = CardComponent;
 
 }
-
-
-
-
-
