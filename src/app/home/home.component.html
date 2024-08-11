@@ -1,37 +1,27 @@
 <div class="desktop-container">
   <div class="grid-container">
     <app-desktop-header></app-desktop-header>
-    <app-desktop-container [style]="desktopFirstContainer"></app-desktop-container>
 
-    <app-desktop-container
-    [id]="'desktop-first-container-left-side'"
-    [appDesktopContainerClass]="'desktop-first-container-left-side'"
-    [cardComponent]="cardComponent"
-    [style]="desktopFirstContainerLeftSide">
+    <app-desktop-container class="firstAppDesktopContainer">
+      <app-card class="firstAppCard">
+        <app-image class="display-none" [src]="''" [imageClass]="'display-none'"></app-image>
+        <app-title class="firstAppTitle" [titleClass]="'firstTitleCard'" [text]="'tuberia text'"></app-title>
+        <app-description class="firstAppDescription" [descriptionClass]="'firstDescriptionCard'" [text]="'tuberia text'"></app-description>
+        <app-button class="firstAppButton" [buttonClass]="'firstButtonCard'" [text]="'tuberia text'"></app-button>
+      </app-card>
     </app-desktop-container>
 
-    <app-desktop-container [style]="desktopFirstTape"></app-desktop-container>
-    <app-desktop-container [style]="desktopSecondContainer"></app-desktop-container>
-    <app-desktop-container [style]="desktopThirdContainer"></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
+    <app-desktop-container></app-desktop-container>
 
-    <app-desktop-container
-    [id]="'desktop-fourth-container'"
-    [appDesktopContainerClass]="'desktop-fourth-container'"
-    [cardComponent]="cardComponent"
-    [style]="desktopFourthContainer">
-    </app-desktop-container>
-
-    <app-desktop-container
-    [id]="'desktop-fourth-container-right'"
-    [appDesktopContainerClass]="'desktop-fourth-container-right'"
-    [cardComponent]="cardComponent"
-    [style]="desktopFourthContainer">
-    </app-desktop-container>
-
-    <app-desktop-container [style]="desktopFifthContainer"></app-desktop-container>
-    <app-desktop-container [style]="desktopSixthContainer"></app-desktop-container>
-    <app-desktop-container [style]="desktopAnimatedAd"></app-desktop-container>
-    <app-desktop-container [style]="desktopFaqs"></app-desktop-container>
     <app-desktop-footer></app-desktop-footer>
   </div>
 </div>
