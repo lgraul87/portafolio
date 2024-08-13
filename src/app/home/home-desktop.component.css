@@ -117,4 +117,7 @@ app-desktop-footer {
   grid-area: 21 / 1 / 32 / -1;
   background-color: grey;
   margin-top: calc(-250px + 25vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
