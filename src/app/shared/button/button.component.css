@@ -1,0 +1,6 @@
+.firstButtonCard.mat-mdc-unelevated-button:not(:disabled) {
+  background-color: var(--gray-900);
+  width: 100%;
+}
+
+

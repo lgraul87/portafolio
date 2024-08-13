@@ -27,7 +27,9 @@ app-desktop-footer {
   background-color: yellow;
 }
 
-.firstAppCard{
+.firstAppCard {
   grid-area: 4 / 4 / 9 / 10;
   background-color: #e0e0ff;
 }
+
+
