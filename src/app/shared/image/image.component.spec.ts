@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DesktopFooterComponent } from './desktop-footer.component';
+import { ImageComponent } from './image.component';
 
-describe('DesktopFooterComponent', () => {
-  let component: DesktopFooterComponent;
-  let fixture: ComponentFixture<DesktopFooterComponent>;
+describe('ImageComponent', () => {
+  let component: ImageComponent;
+  let fixture: ComponentFixture<ImageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DesktopFooterComponent]
+      imports: [ImageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DesktopFooterComponent);
+    fixture = TestBed.createComponent(ImageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

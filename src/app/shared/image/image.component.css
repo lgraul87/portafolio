@@ -1,0 +1,12 @@
+.third-image-class {
+  width: 100%;
+  height: calc(100px + 29vw);
+  aspect-ratio: 1 / 1.2;
+  max-width: 500px;
+  border: 1px solid #dfdcdc;
+}
+
+.second-image-class {
+  width: calc(50px + 2vw);
+  height: calc(50px + 2vw);
+}

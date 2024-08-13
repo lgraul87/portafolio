@@ -1,0 +1,14 @@
+.first-title-card {
+  color: white;
+  font-size: calc(10px + 2.5vw);
+  white-space: pre-line;
+  line-height: 1;
+  font-family: Queens, serif;
+}
+
+.third-title-card {
+  font-size: calc(10px + 1.3vw);
+  margin-top: 14px;
+  margin-bottom: 0px;
+  font-family: Queens, serif;
+}

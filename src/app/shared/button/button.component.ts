@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { ButtonService } from './service/button.service';
 
 @Component({
   selector: 'app-button',
@@ -15,4 +16,10 @@ export class ButtonComponent {
 
   @Input()
   text: any;
+
+  constructor(private buttonService: ButtonService) { }
+
+  actionButton() {
+    this.buttonService.action(this.buttonClass);
+  }
 }

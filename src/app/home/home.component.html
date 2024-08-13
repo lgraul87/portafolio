@@ -1,20 +1,160 @@
 <div class="desktop-container">
   <div class="grid-container">
-    <app-desktop-header></app-desktop-header>
+    <app-desktop-container class="first-app-desktop-container">
+      <app-desktop-header class="app-desktop-header"> </app-desktop-header>
 
-    <app-desktop-container class="firstAppDesktopContainer">
-      <app-card class="firstAppCard">
-        <app-image class="display-none" [src]="''" [imageClass]="'display-none'"></app-image>
-        <app-title class="firstAppTitle" [titleClass]="'firstTitleCard'" [text]="'tuberia text'"></app-title>
-        <app-description class="firstAppDescription" [descriptionClass]="'firstDescriptionCard'" [text]="'tuberia text'"></app-description>
-        <app-button class="firstAppButton" [buttonClass]="'firstButtonCard'" [text]="'tuberia text'"></app-button>
+      <app-card class="first-app-card">
+        <app-image
+          class="display-none"
+          [src]="''"
+          [imageClass]="'display-none'"
+        ></app-image>
+        <app-title
+          class="first-app-title"
+          [titleClass]="'first-title-card'"
+          [text]="dynamicComponentParameters.firstTitleCard"
+        >
+        </app-title>
+        <app-description
+          class="first-app-description"
+          [descriptionClass]="'first-description-card'"
+          [text]="dynamicComponentParameters.firstDescriptionCard"
+        ></app-description>
+        <app-button
+          class="firstAppButton"
+          [buttonClass]="'first-button-card'"
+          [text]="dynamicComponentParameters.firstButtonCardText"
+        ></app-button>
       </app-card>
     </app-desktop-container>
 
-    <app-desktop-container></app-desktop-container>
-    <app-desktop-container></app-desktop-container>
-    <app-desktop-container></app-desktop-container>
-    <app-desktop-container></app-desktop-container>
+    <app-desktop-container class="second-app-desktop-container">
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/angular.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/html.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/css.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/scss.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/sass.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/js.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/typescript.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/rxjs.jpg'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/argular-architect.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+      <app-image
+        class="second-app-image"
+        [src]="'./../../assets/angular-universal.png'"
+        [imageClass]="'second-image-class'"
+      ></app-image>
+    </app-desktop-container>
+
+    <app-desktop-container class="third-app-desktop-container">
+      <app-card class="third-app-card">
+        <app-image
+          class="third-app-image"
+          [src]="'./../../assets/seo.jpg'"
+          [imageClass]="'third-image-class'"
+        ></app-image>
+        <app-title
+          class="third-app-title"
+          [titleClass]="'third-title-card'"
+          [text]="dynamicComponentParameters.thirdTitleCard"
+        ></app-title>
+        <app-description
+          class="third-app-description"
+          [descriptionClass]="'third-description-card'"
+          [text]="dynamicComponentParameters.thirdDescriptionCard"
+        ></app-description>
+        <app-button
+          class="display-none"
+          [buttonClass]="'display-none'"
+          [text]="''"
+        ></app-button>
+      </app-card>
+
+      <app-card class="third-app-card">
+        <app-image
+          class="third-app-image"
+          [src]="'./../../assets/microfrontend-card.png'"
+          [imageClass]="'third-image-class'"
+        ></app-image>
+        <app-title
+          class="third-app-title"
+          [titleClass]="'third-title-card'"
+          [text]="dynamicComponentParameters.fourthTitleCard"
+        ></app-title>
+        <app-description
+          class="third-app-description"
+          [descriptionClass]="'third-description-card'"
+          [text]="dynamicComponentParameters.fourthDescriptionCard"
+        ></app-description>
+        <app-button
+          class="third-app-button"
+          [buttonClass]="'first-button-card'"
+          [text]="dynamicComponentParameters.fourtButtonCardText"
+        ></app-button>
+      </app-card>
+
+      <app-card class="third-app-card">
+        <app-image
+          class="third-app-image"
+          [src]="'./../../assets/testing.webp'"
+          [imageClass]="'third-image-class'"
+        ></app-image>
+        <app-title
+          class="third-app-title"
+          [titleClass]="'third-title-card'"
+          [text]="dynamicComponentParameters.fivethTitleCard"
+        ></app-title>
+        <app-description
+          class="third-app-description"
+          [descriptionClass]="'third-description-card'"
+          [text]="dynamicComponentParameters.fivethDescriptionCard"
+        ></app-description>
+        <app-button
+          class="display-none"
+          [buttonClass]="'display-none'"
+          [text]="''"
+        ></app-button>
+      </app-card>
+    </app-desktop-container>
+
+    <app-desktop-container
+      class="fourth-app-desktop-container"
+    ></app-desktop-container>
     <app-desktop-container></app-desktop-container>
     <app-desktop-container></app-desktop-container>
     <app-desktop-container></app-desktop-container>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-desktop-header',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './desktop-header.component.css'
 })
 export class DesktopHeaderComponent {
+
 
 }

@@ -8,6 +8,7 @@ import { ImageComponent } from '../shared/image/image.component';
 import { TitleComponent } from '../shared/title/title.component';
 import { DescriptionComponent } from '../shared/description/description.component';
 import { ButtonComponent } from '../shared/button/button.component';
+import { HomeService } from './service/home.service';
 
 @Component({
   selector: 'app-home',
@@ -21,13 +22,22 @@ import { ButtonComponent } from '../shared/button/button.component';
     ImageComponent,
     TitleComponent,
     DescriptionComponent,
-    ButtonComponent
+    ButtonComponent,
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-
 export class HomeComponent {
+  dynamicComponentParameters: any;
 
+  constructor(private homeService: HomeService) { }
 
+  ngOnInit(): void {
+    this.dynamicComponentParameters = this.homeService.getDynamicComponentParameters();
+    this.setHeaderActions();
+  }
+
+  private setHeaderActions() {
+    this.homeService.setHeaderActions();
+  }
 }

@@ -1,7 +1,10 @@
 app-desktop-header {
-  grid-area: 1/1/3/-1;
-  background-color: blue;
-  margin: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid white;
+  z-index: 9999;
 }
 
 app-desktop-footer {
@@ -13,23 +16,105 @@ app-desktop-footer {
 .grid-container {
   width: 100%;
   height: 6800px;
-  background-color: red;
   display: grid;
   grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
 
-.firstAppDesktopContainer {
-  grid-area: 3 / 1 / 11 / -1;
-  display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(60px, 1fr));
-  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-  background-color: yellow;
+.first-app-desktop-container {
+  grid-area: 1 / 1 / 11 / -1;
+  display: flex;
+  align-items: center;
+  background-image: url("./../../assets/portfolio-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.firstAppCard {
-  grid-area: 4 / 4 / 9 / 10;
-  background-color: #e0e0ff;
+.app-desktop-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-desktop-header-scrolled {
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+.first-app-card {
+  margin-left: calc(10px + 8vw);
+}
+
+.first-app-title,
+.first-app-description {
+  text-align: center;
+}
+
+.second-app-desktop-container {
+  grid-area: 11/1/14/-1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 9vw;
+  margin-right: 9vw;
 }
 
 
+
+.third-app-desktop-container {
+  grid-area: 14 / 1 / 23 / -1;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 9vw;
+  margin-right: 9vw;
+  height: fit-content;
+}
+
+.third-app-card {
+  padding: 10px;
+}
+
+@keyframes backgroundFadeIn {
+  from {
+    background-color: transparent;
+  }
+
+  to {
+    background-color: white;
+  }
+}
+
+.bg-fade-in {
+  animation: backgroundFadeIn 1s forwards;
+}
+
+
+.hover-underline {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-underline:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.fourth-app-desktop-container {
+  grid-area: 21 / 1 / 32 / -1;
+  background-color: grey;
+  margin-top: calc(-250px + 25vw);
+}

@@ -14,8 +14,8 @@ export const routes: Routes =
     loadComponent: () => import('./repository/repository.component').then(c => c.RepositoryComponent)
   },
   {
-    path: 'proyect-examples',
-    loadComponent: () => import('./proyect-examples/proyect-examples.component').then(c => c.ProyectExamplesComponent)
+    path: 'project-examples',
+    loadComponent: () => import('./project-examples/project-examples.component').then(c => c.ProjectExamplesComponent)
   },
   {
     path: 'contact',
