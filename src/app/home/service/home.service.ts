@@ -25,27 +25,30 @@ Thanks for your visit!`;
 
     const firstButtonCardText = `TAKE A LOOK NOW`;
 
-    const thirdTitleCard = `Angular Seo Web`;
-    const thirdDescriptionCard = `With Angular Universal`;
+    const thirdTitleCardSeo = `Angular Seo Web`;
+    const thirdDescriptionCardSeo = `With Angular Universal`;
 
-    const fourthTitleCard = `Micro Frontend`;
-    const fourthDescriptionCard = `With Module Federation`;
-    const fourtButtonCardText = `TAKE A LOOK NOW`;
+    const thirdTitleCardMicrofront = `Micro Frontend`;
+    const thirdDescriptionCardModuleFederation = `With Module Federation`;
+    const thirdButtonCardText = `TAKE A LOOK NOW`;
 
-    const fivethTitleCard = `Unit Test`;
-    const fivethDescriptionCard = `With Karma and Jasmine`;
+    const thirdthTitleCardTest = `Unit Test`;
+    const thirdDescriptionCardTest = `With Karma and Jasmine`;
+
+    const forthTitleCardCarousel = `Conocimientos sobre ...`;
 
     return {
       firstTitleCard,
       firstDescriptionCard,
       firstButtonCardText,
-      thirdTitleCard,
-      thirdDescriptionCard,
-      fourthTitleCard,
-      fourthDescriptionCard,
-      fourtButtonCardText,
-      fivethTitleCard,
-      fivethDescriptionCard
+      thirdTitleCardSeo,
+      thirdDescriptionCardSeo,
+      thirdTitleCardMicrofront,
+      thirdDescriptionCardModuleFederation,
+      thirdButtonCardText,
+      thirdthTitleCardTest,
+      thirdDescriptionCardTest,
+      forthTitleCardCarousel
     }
   }
 
@@ -174,7 +177,6 @@ Thanks for your visit!`;
         secondHeaderTabNavigation.style.color = "white";
         thirdHeaderTabNavigation.style.color = "white";
       }
-      return true;
     });
 
   }

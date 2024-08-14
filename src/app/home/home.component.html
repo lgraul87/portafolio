@@ -91,12 +91,12 @@
         <app-title
           class="third-app-title"
           [titleClass]="'third-title-card'"
-          [text]="dynamicComponentParameters.thirdTitleCard"
+          [text]="dynamicComponentParameters.thirdTitleCardSeo"
         ></app-title>
         <app-description
           class="third-app-description"
           [descriptionClass]="'third-description-card'"
-          [text]="dynamicComponentParameters.thirdDescriptionCard"
+          [text]="dynamicComponentParameters.thirdDescriptionCardSeo"
         ></app-description>
         <app-button
           class="display-none"
@@ -114,17 +114,19 @@
         <app-title
           class="third-app-title"
           [titleClass]="'third-title-card'"
-          [text]="dynamicComponentParameters.fourthTitleCard"
+          [text]="dynamicComponentParameters.thirdTitleCardMicrofront"
         ></app-title>
         <app-description
           class="third-app-description"
           [descriptionClass]="'third-description-card'"
-          [text]="dynamicComponentParameters.fourthDescriptionCard"
+          [text]="
+            dynamicComponentParameters.thirdDescriptionCardModuleFederation
+          "
         ></app-description>
         <app-button
           class="third-app-button"
           [buttonClass]="'first-button-card'"
-          [text]="dynamicComponentParameters.fourtButtonCardText"
+          [text]="dynamicComponentParameters.thirdButtonCardText"
         ></app-button>
       </app-card>
 
@@ -137,12 +139,12 @@
         <app-title
           class="third-app-title"
           [titleClass]="'third-title-card'"
-          [text]="dynamicComponentParameters.fivethTitleCard"
+          [text]="dynamicComponentParameters.thirdthTitleCardTest"
         ></app-title>
         <app-description
           class="third-app-description"
           [descriptionClass]="'third-description-card'"
-          [text]="dynamicComponentParameters.fivethDescriptionCard"
+          [text]="dynamicComponentParameters.thirdDescriptionCardTest"
         ></app-description>
         <app-button
           class="display-none"
@@ -152,9 +154,26 @@
       </app-card>
     </app-desktop-container>
 
-    <app-desktop-container
-      class="fourth-app-desktop-container"
-    ></app-desktop-container>
+    <app-desktop-container class="fourth-app-desktop-container">
+      <app-title
+        class="forth-app-title"
+        [titleClass]="'forth-title-card'"
+        [text]="dynamicComponentParameters.forthTitleCardCarousel"
+      >
+      </app-title>
+      <div class="carousel-container">
+        <div
+          class="carousel-wrapper"
+          [style.transform]="transform"
+          [style.transition]="transition"
+        >
+          <div class="carousel-item" *ngFor="let image of displayedImages">
+            <img [src]="image" alt="Carousel Image" />
+          </div>
+        </div>
+      </div>
+    </app-desktop-container>
+
     <app-desktop-container></app-desktop-container>
     <app-desktop-container></app-desktop-container>
     <app-desktop-container></app-desktop-container>
