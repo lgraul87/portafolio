@@ -35,7 +35,7 @@ Thanks for your visit!`;
     const thirdthTitleCardTest = `Unit Test`;
     const thirdDescriptionCardTest = `With Karma and Jasmine`;
 
-    const forthTitleCardCarousel = `Conocimientos sobre ...`;
+    const forthTitleCardCarousel = `Skills ...`;
 
     return {
       firstTitleCard,
@@ -194,5 +194,9 @@ Thanks for your visit!`;
 
   navigateToRepository() {
     this.router.navigate(["repository"]);
+  }
+
+  repeatElementsArray(repeatTimes: any, images: any) {
+    return Array(repeatTimes).fill(images).flat();
   }
 }

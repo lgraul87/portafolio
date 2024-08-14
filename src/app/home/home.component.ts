@@ -35,13 +35,11 @@ export class HomeComponent {
   secondImageCarousel = './../../assets/slide-2.png';
   thirdImageCarousel = './../../assets/slide-3.png';
 
-
   images: string[] = [
     this.firstImageCarousel,
     this.secondImageCarousel,
     this.thirdImageCarousel,
   ];
-
 
   displayedImages: string[] = [];
   currentIndex: number = 0;
@@ -52,23 +50,17 @@ export class HomeComponent {
   repeatTimes = 20;
 
   constructor(private homeService: HomeService) { }
-  private setHeaderActions() {
-    this.homeService.setHeaderActions();
-  }
 
   ngOnInit(): void {
-    const repeatedArray = Array(this.repeatTimes).fill(this.images).flat();
+    const repeatedArray = this.homeService.repeatElementsArray(this.repeatTimes, this.images)
     this.displayedImages = [...repeatedArray, this.images[0]];
     this.startCarousel();
     this.dynamicComponentParameters = this.homeService.getDynamicComponentParameters();
     this.setHeaderActions();
-
   }
 
-  ngOnDestroy() {
-    if (this.intervalSub) {
-      this.intervalSub.unsubscribe();
-    }
+  private setHeaderActions() {
+    this.homeService.setHeaderActions();
   }
 
   startCarousel() {
@@ -76,7 +68,6 @@ export class HomeComponent {
       this.nextImage();
     });
   }
-
   nextImage() {
     this.currentIndex++;
 
@@ -92,6 +83,11 @@ export class HomeComponent {
     } else {
       this.transition = 'transform 1.4s ease';
       this.transform = `translateX(-${this.currentIndex * 20}%)`;
+    }
+  }
+  ngOnDestroy() {
+    if (this.intervalSub) {
+      this.intervalSub.unsubscribe();
     }
   }
 }
