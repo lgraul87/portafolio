@@ -52,11 +52,10 @@ export class HomeComponent {
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
-    const repeatedArray = this.homeService.repeatElementsArray(this.repeatTimes, this.images)
-    this.displayedImages = [...repeatedArray, this.images[0]];
-    this.startCarousel();
     this.dynamicComponentParameters = this.homeService.getDynamicComponentParameters();
     this.setHeaderActions();
+    this.startCarousel();
+    this.displayedImages = this.homeService.repeatElementsArray(this.repeatTimes, this.images)
   }
 
   private setHeaderActions() {
@@ -69,20 +68,17 @@ export class HomeComponent {
     });
   }
   nextImage() {
+    this.homeService.nextImage();
     this.currentIndex++;
-
+    this.transform = `translateX(-${this.currentIndex * 20}%)`;
+    this.transition = 'transform 1.4s ease';
     if (this.currentIndex === this.images.length) {
-      this.transition = 'transform 1.4s ease';
-      this.transform = `translateX(-${this.currentIndex * 20}%)`;
 
       setTimeout(() => {
         this.transition = 'none';
         this.transform = 'translateX(0%)';
         this.currentIndex = 0;
       }, 1500);
-    } else {
-      this.transition = 'transform 1.4s ease';
-      this.transform = `translateX(-${this.currentIndex * 20}%)`;
     }
   }
   ngOnDestroy() {

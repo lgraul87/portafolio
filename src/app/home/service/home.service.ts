@@ -52,6 +52,8 @@ Thanks for your visit!`;
     }
   }
 
+  nextImage() { }
+
   setHeaderActions() {
     const fullNameHeaderTabNavigation = this.renderer.createElement("p");
     this.renderer.setStyle(fullNameHeaderTabNavigation, "color", "white");
