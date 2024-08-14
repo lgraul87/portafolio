@@ -53,13 +53,9 @@ export class HomeComponent {
 
   ngOnInit(): void {
     this.dynamicComponentParameters = this.homeService.getDynamicComponentParameters();
-    this.setHeaderActions();
+    this.homeService.setHeaderActions();
     this.startCarousel();
     this.displayedImages = this.homeService.repeatElementsArray(this.repeatTimes, this.images)
-  }
-
-  private setHeaderActions() {
-    this.homeService.setHeaderActions();
   }
 
   startCarousel() {
