@@ -60,15 +60,15 @@ export class HomeComponent {
 
   startCarousel() {
     this.intervalSub = interval(5000).subscribe(() => {
-      this.nextImage();
+      const carousel = this.homeService.nextImage(this.currentIndex, this.transform, this.transition, this.images);
+      this.currentIndex = carousel.currentIndex;
+      this.transform = carousel.transform;
+      this.transition = carousel.transition;
+      this.images = carousel.images;
     });
   }
   nextImage() {
-    const carousel = this.homeService.nextImage(this.currentIndex, this.transform, this.transition, this.images);
-    this.currentIndex = carousel.currentIndex;
-    this.transform = carousel.transform;
-    this.transition = carousel.transition;
-    this.images = carousel.images;
+
   }
   ngOnDestroy() {
     if (this.intervalSub) {
