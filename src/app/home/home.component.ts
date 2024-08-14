@@ -31,35 +31,37 @@ import { interval, Subscription } from 'rxjs';
 export class HomeComponent {
   dynamicComponentParameters: any;
 
+  startCarouselSubscription!: Subscription;
+  currentIndex: number = 0;
+  transform: string = 'translateX(0%)';
+  transition: string = 'transform 0.5s ease';
+
+  displayedImages: string[] = [];
+  repeatTimes = 20;
   firstImageCarousel = './../../assets/slide-1.png';
   secondImageCarousel = './../../assets/slide-2.png';
   thirdImageCarousel = './../../assets/slide-3.png';
-
   images: string[] = [
     this.firstImageCarousel,
     this.secondImageCarousel,
     this.thirdImageCarousel,
   ];
 
-  displayedImages: string[] = [];
-  currentIndex: number = 0;
-  transform: string = 'translateX(0%)';
-  transition: string = 'transform 0.5s ease';
-  intervalSub!: Subscription;
-
-  repeatTimes = 20;
-
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
-    this.dynamicComponentParameters = this.homeService.getDynamicComponentParameters();
-    this.homeService.setHeaderActions();
-    this.startCarousel();
-    this.displayedImages = this.homeService.repeatElementsArray(this.repeatTimes, this.images)
+    this.initHomeComponent();
   }
 
-  startCarousel() {
-    this.intervalSub = interval(5000).subscribe(() => {
+  ngOnDestroy() {
+    this.homeService.destroySubscription(this.startCarouselSubscription);
+  }
+
+  private initHomeComponent() {
+    this.dynamicComponentParameters = this.homeService.getDynamicComponentParameters();
+    this.homeService.setHeaderActions();
+    this.displayedImages = this.homeService.repeatElementsArray(this.repeatTimes, this.images);
+    this.startCarouselSubscription = this.homeService.startCarousel().subscribe(() => {
       const carousel = this.homeService.nextImage(this.currentIndex, this.transform, this.transition, this.images);
       this.currentIndex = carousel.currentIndex;
       this.transform = carousel.transform;
@@ -68,9 +70,4 @@ export class HomeComponent {
     });
   }
 
-  ngOnDestroy() {
-    if (this.intervalSub) {
-      this.intervalSub.unsubscribe();
-    }
-  }
 }

@@ -1,5 +1,6 @@
 import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 import { Router } from '@angular/router';
+import { interval } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -52,12 +53,21 @@ Thanks for your visit!`;
     }
   }
 
+  startCarousel() {
+    return interval(5000);
+  }
+
+  destroySubscription(startCarouselSubscription: any) {
+    if (startCarouselSubscription) {
+      startCarouselSubscription.unsubscribe();
+    }
+  }
+
   nextImage(currentIndex: any, transform: any, transition: any, images: any) {
     currentIndex++;
     transform = `translateX(-${currentIndex * 20}%)`;
     transition = 'transform 1.4s ease';
     if (currentIndex === images.length) {
-
       setTimeout(() => {
         transition = 'none';
         transform = 'translateX(0%)';
