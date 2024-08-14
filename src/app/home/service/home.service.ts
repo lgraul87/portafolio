@@ -14,56 +14,42 @@ export class HomeService {
   }
 
   getDynamicComponentParameters() {
-    const firstTitleCard = `Welcome,
-Everyone!`;
+    return this.getHomeComponentParameters();
+  }
 
-    const firstDescriptionCard = `I am an Angular Developer,
-and this is my portfolio.
-
-here you can find examples
-of my work. Enjoy it!
-Thanks for your visit!`;
-
-    const firstButtonCardText = `TAKE A LOOK NOW`;
-
-    const thirdTitleCardSeo = `Angular Seo Web`;
-    const thirdDescriptionCardSeo = `With Angular Universal`;
-
-    const thirdTitleCardMicrofront = `Micro Frontend`;
-    const thirdDescriptionCardModuleFederation = `With Module Federation`;
-    const thirdButtonCardText = `TAKE A LOOK NOW`;
-
-    const thirdthTitleCardTest = `Unit Test`;
-    const thirdDescriptionCardTest = `With Karma and Jasmine`;
-
-    const forthTitleCardCarousel = `Skills ...`;
-
-    return {
-      firstTitleCard,
-      firstDescriptionCard,
-      firstButtonCardText,
-      thirdTitleCardSeo,
-      thirdDescriptionCardSeo,
-      thirdTitleCardMicrofront,
-      thirdDescriptionCardModuleFederation,
-      thirdButtonCardText,
-      thirdthTitleCardTest,
-      thirdDescriptionCardTest,
-      forthTitleCardCarousel
-    }
+  setHeaderActions() {
+    this.createHeaderBehavior();
+  }
+  repeatElementsArray(repeatTimes: any, images: any) {
+    return Array(repeatTimes).fill(images).flat();
   }
 
   startCarousel() {
     return interval(5000);
   }
-
-  destroySubscription(startCarouselSubscription: any) {
-    if (startCarouselSubscription) {
-      startCarouselSubscription.unsubscribe();
-    }
+  nextImage(currentIndex: any, transform: any, transition: any, images: any) {
+    return this.nextImageCarousel(currentIndex, transform, transition, images);
   }
 
-  nextImage(currentIndex: any, transform: any, transition: any, images: any) {
+  navigateToContact() {
+    this.router.navigate(["contact"]);
+  }
+
+  navigateToAboutMe() {
+    this.router.navigate(["about-me"]);
+  }
+
+  navigateToProjectsExamples() {
+    this.router.navigate(["project-examples"]);
+  }
+
+  navigateToRepository() {
+    this.router.navigate(["repository"]);
+  }
+
+  // IMPLEMENTATION   ###################################################################################################################
+
+  nextImageCarousel(currentIndex: any, transform: any, transition: any, images: any) {
     currentIndex++;
     transform = `translateX(-${currentIndex * 20}%)`;
     transition = 'transform 1.4s ease';
@@ -78,7 +64,7 @@ Thanks for your visit!`;
     return carousel;
   }
 
-  setHeaderActions() {
+  private createHeaderBehavior() {
     const fullNameHeaderTabNavigation = this.renderer.createElement("p");
     this.renderer.setStyle(fullNameHeaderTabNavigation, "color", "white");
     this.renderer.setStyle(fullNameHeaderTabNavigation, "padding", "10px");
@@ -204,25 +190,51 @@ Thanks for your visit!`;
         thirdHeaderTabNavigation.style.color = "white";
       }
     });
-
-  }
-  navigateToContact() {
-    this.router.navigate(["contact"]);
   }
 
-  navigateToAboutMe() {
-    this.router.navigate(["about-me"]);
+  destroySubscription(startCarouselSubscription: any) {
+    if (startCarouselSubscription) {
+      startCarouselSubscription.unsubscribe();
+    }
   }
 
-  navigateToProjectsExamples() {
-    this.router.navigate(["project-examples"]);
-  }
+  private getHomeComponentParameters() {
+    const firstTitleCard = `Welcome,
+  Everyone!`;
 
-  navigateToRepository() {
-    this.router.navigate(["repository"]);
-  }
+    const firstDescriptionCard = `I am an Angular Developer,
+  and this is my portfolio.
 
-  repeatElementsArray(repeatTimes: any, images: any) {
-    return Array(repeatTimes).fill(images).flat();
+  here you can find examples
+  of my work. Enjoy it!
+  Thanks for your visit!`;
+
+    const firstButtonCardText = `TAKE A LOOK NOW`;
+
+    const thirdTitleCardSeo = `Angular Seo Web`;
+    const thirdDescriptionCardSeo = `With Angular Universal`;
+
+    const thirdTitleCardMicrofront = `Micro Frontend`;
+    const thirdDescriptionCardModuleFederation = `With Module Federation`;
+    const thirdButtonCardText = `TAKE A LOOK NOW`;
+
+    const thirdthTitleCardTest = `Unit Test`;
+    const thirdDescriptionCardTest = `With Karma and Jasmine`;
+
+    const forthTitleCardCarousel = `Skills ...`;
+
+    return {
+      firstTitleCard,
+      firstDescriptionCard,
+      firstButtonCardText,
+      thirdTitleCardSeo,
+      thirdDescriptionCardSeo,
+      thirdTitleCardMicrofront,
+      thirdDescriptionCardModuleFederation,
+      thirdButtonCardText,
+      thirdthTitleCardTest,
+      thirdDescriptionCardTest,
+      forthTitleCardCarousel
+    };
   }
 }
