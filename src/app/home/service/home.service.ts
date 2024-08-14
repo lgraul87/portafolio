@@ -52,7 +52,21 @@ Thanks for your visit!`;
     }
   }
 
-  nextImage() { }
+  nextImage(currentIndex: any, transform: any, transition: any, images: any) {
+    currentIndex++;
+    transform = `translateX(-${currentIndex * 20}%)`;
+    transition = 'transform 1.4s ease';
+    if (currentIndex === images.length) {
+
+      setTimeout(() => {
+        transition = 'none';
+        transform = 'translateX(0%)';
+        currentIndex = 0;
+      }, 1500);
+    }
+    const carousel = { currentIndex, transform, transition, images }
+    return carousel;
+  }
 
   setHeaderActions() {
     const fullNameHeaderTabNavigation = this.renderer.createElement("p");

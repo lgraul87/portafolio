@@ -68,18 +68,11 @@ export class HomeComponent {
     });
   }
   nextImage() {
-    this.homeService.nextImage();
-    this.currentIndex++;
-    this.transform = `translateX(-${this.currentIndex * 20}%)`;
-    this.transition = 'transform 1.4s ease';
-    if (this.currentIndex === this.images.length) {
-
-      setTimeout(() => {
-        this.transition = 'none';
-        this.transform = 'translateX(0%)';
-        this.currentIndex = 0;
-      }, 1500);
-    }
+    const carousel = this.homeService.nextImage(this.currentIndex, this.transform, this.transition, this.images);
+    this.currentIndex = carousel.currentIndex;
+    this.transform = carousel.transform;
+    this.transition = carousel.transition;
+    this.images = carousel.images;
   }
   ngOnDestroy() {
     if (this.intervalSub) {
