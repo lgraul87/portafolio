@@ -67,9 +67,7 @@ export class HomeComponent {
       this.images = carousel.images;
     });
   }
-  nextImage() {
 
-  }
   ngOnDestroy() {
     if (this.intervalSub) {
       this.intervalSub.unsubscribe();
