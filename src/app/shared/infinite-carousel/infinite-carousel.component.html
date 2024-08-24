@@ -1,0 +1,9 @@
+<div
+  class="carousel-wrapper"
+  [style.transform]="transform"
+  [style.transition]="transition"
+>
+  <div class="carousel-item" *ngFor="let image of displayedImages">
+    <img [src]="image" alt="Carousel Image" />
+  </div>
+</div>

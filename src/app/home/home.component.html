@@ -30,52 +30,42 @@
 
     <app-desktop-container class="second-app-desktop-container">
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/angular.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/html.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/css.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/scss.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/sass.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/js.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/typescript.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/rxjs.jpg'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/argular-architect.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
       <app-image
-        class="second-app-image"
         [src]="'./../../assets/angular-universal.png'"
         [imageClass]="'second-image-class'"
       ></app-image>
@@ -84,7 +74,6 @@
     <app-desktop-container class="third-app-desktop-container">
       <app-card class="third-app-card">
         <app-image
-          class="third-app-image"
           [src]="'./../../assets/seo.jpg'"
           [imageClass]="'third-image-class'"
         ></app-image>
@@ -107,7 +96,6 @@
 
       <app-card class="third-app-card">
         <app-image
-          class="third-app-image"
           [src]="'./../../assets/microfrontend-card.png'"
           [imageClass]="'third-image-class'"
         ></app-image>
@@ -132,7 +120,6 @@
 
       <app-card class="third-app-card">
         <app-image
-          class="third-app-image"
           [src]="'./../../assets/testing.webp'"
           [imageClass]="'third-image-class'"
         ></app-image>
@@ -161,20 +148,23 @@
         [text]="dynamicComponentParameters.forthTitleCardCarousel"
       >
       </app-title>
-      <div class="carousel-container">
-        <div
-          class="carousel-wrapper"
-          [style.transform]="transform"
-          [style.transition]="transition"
-        >
-          <div class="carousel-item" *ngFor="let image of displayedImages">
-            <img [src]="image" alt="Carousel Image" />
-          </div>
-        </div>
-      </div>
+      <app-infinite-carousel
+        [firstInfiniteCarouselImage]="'./../../assets/slide-1.png'"
+        [secondInfiniteCarouselImage]="'./../../assets/slide-2.png'"
+        [thirdInfiniteCarouselImage]="'./../../assets/slide-3.png'"
+      >
+      </app-infinite-carousel>
     </app-desktop-container>
 
-    <app-desktop-container></app-desktop-container>
+    <app-desktop-container class="fiveth-app-desktop-container">
+      <app-card class="fiveth-app-card">
+        <app-image
+          [src]="'./../../assets/seo.jpg'"
+          [imageClass]="'fiveth-image-class'"
+        ></app-image>
+      </app-card>
+    </app-desktop-container>
+
     <app-desktop-container></app-desktop-container>
     <app-desktop-container></app-desktop-container>
     <app-desktop-container></app-desktop-container>

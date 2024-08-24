@@ -128,22 +128,14 @@ app-desktop-footer {
   margin-bottom: 500px;
 }
 
-.carousel-wrapper {
-  display: flex;
-  transition: transform 0.5s ease;
-}
-
-.carousel-item {
-  min-width: 20%;
-  box-sizing: border-box;
+.fiveth-app-desktop-container {
+  grid-area: 29 / 1 / 38 / -1;
+  margin-top: calc(-600px + 50vw);
   display: flex;
   justify-content: center;
-  aspect-ratio: 3/1;
 }
 
-.carousel-item img {
-  margin: 30px;
-  width: 100%;
-  height: 350px;
-  border: 1px solid rgb(212, 212, 212);
+.fiveth-app-card {
+  padding: 10px;
+  overflow: hidden;
 }
